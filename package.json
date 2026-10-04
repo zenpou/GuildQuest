@@ -8,6 +8,7 @@
     "build": "node scripts/export-story.cjs && tsc --noEmit && vite build",
     "test": "vitest run",
     "sim": "tsx scripts/sim.ts",
+    "sim:styles": "tsx scripts/playstyles.ts",
     "preview": "vite preview --host 127.0.0.1",
     "test:browser": "tsx scripts/story-fixtures.ts && node scripts/browser-check.cjs",
     "test:story": "tsx scripts/story-fixtures.ts && node scripts/story-browser-check.cjs",

@@ -66,7 +66,10 @@ npm run build
 npm run test:browser
 npm run test:returns
 npm run sim -- 100
+npm run sim:styles
 ```
+
+`sim:styles` は遊び方(雇用して2隊/初期4人だけ/施設を建てない など)ごとに30日を自動で進め、期限内クリア率・所持金の推移・灰竜への初挑戦日を比べます。
 
 ブラウザ検証にはインストール済みGoogle Chromeを使用します。`test:browser` は専用のローカルサーバーと新規ブラウザプロファイルでPC・スマホ幅、初日操作、6日目、保存、offline、PWA更新、旧セーブ、両エンドを検証し、`artifacts/` に画面とJSONを出力します。通常のブラウザセーブには触れません。
 
