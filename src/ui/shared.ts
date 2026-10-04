@@ -13,7 +13,7 @@ import {
 import { getRelation, relationLabel, relationMark } from '../core/relations';
 import { REP_NAMES, repLevel } from '../core/scenes';
 import { MAX_DAY, PARTY_MAX, POTION_PRICE, STAT_KEYS, STAT_LABEL, UPKEEP_PER_DAY, type Adventurer, type ExpeditionResult, type GameState } from '../core/types';
-import { questRecommendedPower } from '../core/readiness';
+import { forecastExpedition, forecastVerdict, questRecommendedPower, type Forecast } from '../core/readiness';
 import { bar, div, h, span } from './dom';
 
 const SAVE_KEY = 'guildquest_save_v1';
@@ -456,6 +456,22 @@ export function dispatchMembers(): Adventurer[] {
   if (!d.leader && d.members.length) d.leader = d.members[0];
   return d.members.map(adv).filter(Boolean) as Adventurer[];
 }
+// 派遣画面は操作のたびに描き直すので、編成が変わらない間は試算を使い回す。
+let forecastMemo: { key: string; value: Forecast } | null = null;
+function dispatchForecast(questId: string, members: Adventurer[]): Forecast {
+  const d = ui.d;
+  const input = {
+    questId, members, leaderId: d.leader ?? members[0].id, policy: d.policy, potions: d.potions,
+    relations: state.relations, expMult: 1 + 0.2 * (state.facilities.training ?? 0), clinicLevel: state.facilities.clinic ?? 0,
+  };
+  const key = JSON.stringify([questId, input.leaderId, input.policy, input.potions, input.clinicLevel,
+    members.map((m) => [m.id, m.job, m.level, m.fatigue]),
+    members.flatMap((a, i) => members.slice(i + 1).map((b) => getRelation(state.relations, a, b)))]);
+  if (forecastMemo?.key !== key) forecastMemo = { key, value: forecastExpedition(input) };
+  return forecastMemo.value;
+}
+const share = (p: number) => p >= 0.95 ? '9割以上' : p < 0.05 ? '1割未満' : `約${Math.round(p * 10)}割`;
+
 export function previewCard(): HTMLElement {
   const d = ui.d;
   const q = d.questId ? QUEST[d.questId] : null;
@@ -465,8 +481,8 @@ export function previewCard(): HTMLElement {
   else {
     const rec = questRecommendedPower(q);
     const pw = partyPower(members);
-    const ratio = rec ? pw / rec : 0;
-    const verdict = members.length === 0 ? '—' : ratio >= 1.15 ? '余裕' : ratio >= 0.95 ? '適正' : ratio >= 0.75 ? '厳しい' : '危険';
+    const forecast = members.length ? dispatchForecast(q.id, members) : null;
+    const verdict = forecast ? forecastVerdict(forecast) : '—';
     const pairs: { a: Adventurer; b: Adventurer; v: number }[] = [];
     for (let i = 0; i < members.length; i++) for (let j = i + 1; j < members.length; j++) pairs.push({ a: members[i], b: members[j], v: getRelation(state.relations, members[i], members[j]) });
     const bad = pairs.filter((p) => p.v <= -8);
@@ -487,6 +503,14 @@ export function previewCard(): HTMLElement {
         : q.type === 'gather' ? '4人編成の目安。集まる量は採取の得意な仲間で決まります。'
           : '4人編成の目安。疲労・回復手段で変わります。'),
       div('pbar', h('div', { class: 'fill', style: `width:${Math.min(100, (pw / Math.max(rec * 1.4, 1)) * 100)}%` }), h('div', { class: 'mark', style: `left:${(1 / 1.4) * 100}%` }), div('label', `戦力${pw} / 戦力の目安${rec}（${verdict}）`)),
+      forecast ? div('dispatch-forecast',
+        div('small', [
+          `成功 ${share(forecast.success)}`,
+          forecast.timeout >= 0.05 ? `時間切れ ${share(forecast.timeout)}` : null,
+          forecast.retreat + forecast.wipe >= 0.05 ? `撤退・全滅 ${share(forecast.retreat + forecast.wipe)}` : null,
+          `負傷 平均${forecast.injuries.toFixed(1)}人`,
+        ].filter(Boolean).join(' ・')),
+        div('small dim', `判定は今の編成・方針・回復薬で${forecast.samples}回試算した結果です。実際の成否は運でも変わります。`)) : null,
       div('small dim', `${AREA[q.area].name}:${AREA[q.area].desc}`),
       div('small', { style: 'margin:4px 0' } as any, `回復役: ${hasHealer ? 'あり' : 'なし'} ・リーダー: ${leader ? `${leader.name}(${PERSONALITY[leader.personality].name}:撤退${PERSONALITY[leader.personality].retreatBias > 0.1 ? 'しやすい' : PERSONALITY[leader.personality].retreatBias < -0.1 ? 'しにくい' : '普通'})` : '-'}`),
       pairs.length ? div('small', ...pairs.map((p) => span(p.v <= -8 ? 'bad' : p.v >= 8 ? 'good' : 'dim', `${p.a.name}×${p.b.name} ${relationMark(p.v)}  `))) : null,
