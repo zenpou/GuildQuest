@@ -54,8 +54,8 @@ export function attackOf(stats: Stats, job: string): number {
 }
 
 /** 1人あたりの戦力目安 */
-export function powerOf(a: Adventurer, job: string = a.job): number {
-  const s = effectiveStats(a, job);
+export function powerOf(a: Adventurer, job: string = a.job, withFatigue = true): number {
+  const s = effectiveStats(a, job, withFatigue);
   return Math.round(s.hp / 4 + attackOf(s, job) * 1.5 + s.def + s.spd * 0.5 + s.scout * 0.2 + s.gather * 0.1);
 }
 
@@ -63,9 +63,13 @@ export function bestJob(a: Adventurer): string {
   return JOBS.reduce((best, j) => ((a.apt[j.id] ?? 0) > (a.apt[best] ?? 0) ? j.id : best), JOBS[0].id);
 }
 
+/**
+ * 日給は適職での戦力(疲労を除く)に比例する。育った冒険者ほど抱える重みが増え、
+ * 人数を増やせば稼ぎも支出も膨らむ。
+ */
 export function salaryOf(a: Adventurer): number {
-  const p = powerOf(a, bestJob(a));
-  const raw = 10 + (p - 50) * 0.35 + (a.growth - 1) * 14;
+  const p = powerOf(a, bestJob(a), false);
+  const raw = 10 + (p - 50) * 0.6 + (a.growth - 1) * 14;
   return Math.max(8, Math.round(raw * traitNum(a, 'salaryMult', 1)));
 }
 

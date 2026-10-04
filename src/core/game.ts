@@ -91,7 +91,7 @@ export function hire(s: GameState, candId: string): Result {
   s.adventurers.push(c.adv);
   s.hiredToday = true;
   if (isTalent(c.adv)) s.pendingTags.push('hire_talent');
-  else if (c.adv.level === 1 && c.adv.salary <= 13) s.pendingTags.push('hire_cheap_newbie');
+  else if (c.adv.level === 1 && c.adv.salary <= 15) s.pendingTags.push('hire_cheap_newbie');
   return ok(undefined);
 }
 
@@ -354,7 +354,7 @@ export function advanceDay(s: GameState): DayReport {
   // 候補者の入れ替わり
   const expired = s.candidates.filter((c) => c.expiresDay <= s.day);
   s.candidates = s.candidates.filter((c) => c.expiresDay > s.day);
-  if (expired.some((c) => c.adv.salary >= 28 || isTalent(c.adv)) && s.gold < 400) tags.push('reject_expensive');
+  if (expired.some((c) => c.adv.salary >= 40 || isTalent(c.adv)) && s.gold < 400) tags.push('reject_expensive');
   const arrivals = 1 + (repLevel(s.rep) >= 3 ? 1 : 0) + (rngFor(s.seed, 'arr', s.day).chance(0.4) ? 1 : 0);
   for (let i = 0; i < arrivals && s.candidates.length < MAX_CANDIDATES; i++) spawnCandidate(s, `d${s.day}_${i}`);
 

@@ -5,6 +5,7 @@ import { simulateExpedition } from '../src/core/expedition';
 import { rngFor } from '../src/core/rng';
 import { QUEST } from '../src/core/data';
 import { questRecommendedPower } from '../src/core/readiness';
+import { salaryOf } from '../src/core/adventurer';
 
 describe('campaign balance and deadline', () => {
   it('does not advance or dispatch beyond the requested final day', () => {
@@ -69,6 +70,19 @@ describe('campaign balance and deadline', () => {
       if (result.success) cleared++;
     }
     expect(cleared).toBeGreaterThanOrEqual(75);
+  });
+
+  it('wages grow with the party: a trained roster costs more than twice the opening one', () => {
+    const state = newGame(42);
+    changeJob(state, 'c_aldo', 'ranger');
+    const payroll = () => state.adventurers.reduce((total, a) => total + salaryOf(a), 0);
+    const opening = payroll();
+    for (const a of state.adventurers) a.level = 7;
+    expect(payroll()).toBeGreaterThanOrEqual(opening * 2);
+    // 日給は疲労で変わらない(疲れているときにLvが上がっても安くならない)
+    const rested = payroll();
+    for (const a of state.adventurers) a.fatigue = 90;
+    expect(payroll()).toBe(rested);
   });
 
   it('the tutorial-recommended pair meets the herb gathering benchmark', () => {
