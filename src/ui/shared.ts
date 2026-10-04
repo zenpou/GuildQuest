@@ -188,7 +188,7 @@ export function viewHome() {
           !state.finalCleared && !finalExpedition ? div('small dim', `最終依頼は${finalDepartureDeadline}日目までに出発が必要です(帰還まで${finalQ.days}日)。`) : null,
           timeStatus,
           state.finalCleared ? div('small dim', '物語と冒険ログを振り返ったり、ギルドの運営を続けたりできます。')
-            : !finalExpedition ? div('small dim', locked ? `依頼の解放には評判が${finalQ.unlockRep}必要(現在${state.rep})。` : '依頼は解放済み。仲間を整えて挑もう。') : null,
+            : !finalExpedition ? div('small dim', locked ? `依頼の解放には評判が${finalQ.unlockRep}必要(現在${state.rep})。` : '依頼は解放済み。挑戦の目安は4人が平均Lv7以上・回復薬6本。派遣画面の見込みで確かめよう。') : null,
         ),
       ),
       div(

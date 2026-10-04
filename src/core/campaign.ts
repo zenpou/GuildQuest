@@ -1,5 +1,5 @@
 import type { CampaignState, GameState, QuestDef } from './types';
-import { QUEST } from './data';
+import { FACILITY, QUEST } from './data';
 
 export type { CampaignState } from './types';
 
@@ -14,7 +14,10 @@ export const CAMPAIGN_VERSION = 1 as const;
 export const CAMPAIGN_SUPPORT_DAYS = 5;
 export const CAMPAIGN_SUPPORT_AMOUNT = 90;
 
-export type CampaignFeature = 'policy' | 'recruit' | 'facility' | 'finance';
+/** Gold that must remain after paying for the training hall before the objective suggests it. */
+export const TRAINING_HINT_RESERVE = 300;
+
+export type CampaignFeature ='policy' | 'recruit' | 'facility' | 'finance';
 export type TutorialTab = 'roster' | 'dispatch' | 'log' | 'home' | 'recruit' | 'facility';
 export interface TutorialObjective {
   title: string;
@@ -105,6 +108,12 @@ export function tutorialObjective(s: GameState): TutorialObjective {
   }
   if (s.finalCleared) {
     return { title: '灰竜討伐達成', text: '街に平和が戻った。仲間たちの物語を振り返ろう。', tab: 'log' };
+  }
+  // Whether the dragon is reachable by day 30 is decided by how fast the
+  // party grows, and the training hall is the one lever for that.  Point at
+  // it while it is unbuilt and affordable with a few days of wages to spare.
+  if ((s.facilities.training ?? 0) === 0 && s.gold >= FACILITY.training.costs[0] + TRAINING_HINT_RESERVE) {
+    return { title: '育てる時間をつくる', text: '訓練所を建てると、全員の成長が早まります。灰竜に間に合うかは育成の速さしだい。資金に余裕のある今が建てどきです。', tab: 'facility' };
   }
   return { title: '灰竜討伐への道', text: '森から坑道、遺跡へ。評判を高め、休養と回復薬を用意して灰竜に挑もう。', tab: 'dispatch' };
 }

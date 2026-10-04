@@ -69,6 +69,20 @@ describe('段階チュートリアル', () => {
     expect(advanceDay(s).day).toBe(2);
   });
 
+  it('研修後、訓練所が未建設で資金に余裕があれば建設を案内する', () => {
+    const s = newGame(5);
+    s.day = 6;
+    s.campaign!.jobChanged = true;
+    s.campaign!.introComplete = true;
+    s.gold = 699;
+    expect(tutorialObjective(s).tab).toBe('dispatch');
+    s.gold = 700;
+    expect(tutorialObjective(s).tab).toBe('facility');
+    expect(buildFacility(s, 'training').ok).toBe(true);
+    s.gold = 2000;
+    expect(tutorialObjective(s).tab).toBe('dispatch');
+  });
+
   it('派遣入力の不正値と不正施設は状態を変更しない', () => {
     const s = newGame(3);
     changeJob(s, 'c_aldo', 'ranger');
