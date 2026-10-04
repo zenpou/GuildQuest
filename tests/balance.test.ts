@@ -46,6 +46,31 @@ describe('campaign balance and deadline', () => {
     expect(questRecommendedPower(QUEST.q_drake)).toBeGreaterThan(questRecommendedPower(QUEST.q_survey));
   });
 
+  it('quest benchmarks follow measured risk rather than the area average', () => {
+    const state = newGame(42);
+    changeJob(state, 'c_aldo', 'ranger');
+    const starters = partyPower(state.adventurers);
+    // Lv1の初期4人は森狼で平均1人以上が負傷する。「適正」(目安の95%)と表示しない。
+    expect(starters).toBeLessThan(questRecommendedPower(QUEST.q_wolf) * 0.95);
+    expect(starters).toBeGreaterThanOrEqual(questRecommendedPower(QUEST.q_patrol) * 0.95);
+    // 遺跡の調査・遺物回収は灰竜よりずっと手前の戦力で安定する。
+    expect(questRecommendedPower(QUEST.q_survey)).toBeLessThan(questRecommendedPower(QUEST.q_golem));
+    expect(questRecommendedPower(QUEST.q_relic)).toBeLessThan(questRecommendedPower(QUEST.q_drake));
+  });
+
+  it('the first hunt is not decided by encounter luck alone', () => {
+    const state = newGame(42);
+    changeJob(state, 'c_aldo', 'ranger');
+    let cleared = 0;
+    for (let seed = 1; seed <= 100; seed++) {
+      const result = simulateExpedition({ rng: rngFor(seed, 'goblin-standard'), questId: 'q_goblin',
+        members: state.adventurers.map(a => structuredClone(a)), leaderId: 'c_bruno', policy: 'standard', potions: 0,
+        relations: state.relations, startDay: 2, expMult: 1, clinicLevel: 0 });
+      if (result.success) cleared++;
+    }
+    expect(cleared).toBeGreaterThanOrEqual(75);
+  });
+
   it('the tutorial-recommended pair meets the herb gathering benchmark', () => {
     const state = newGame(42);
     changeJob(state, 'c_aldo', 'ranger');

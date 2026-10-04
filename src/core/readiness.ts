@@ -1,9 +1,13 @@
 import { AREA } from './data';
 import type { QuestDef } from './types';
 
-/** Quest-specific benchmark; fewer adventurers do not make an enemy weaker. */
+/**
+ * Quest-specific benchmark for a full party; fewer adventurers do not make
+ * an enemy weaker.  Quests whose real risk differs from their area average
+ * (wolves hit harder than the forest suggests, ruins surveys are gentler than
+ * the dragon next door) carry their own measured value in quests.json.
+ */
 export function questRecommendedPower(quest: QuestDef): number {
-  // The tutorial explicitly recommends Aldo and Mina for this gentle job.
-  if (quest.id === 'q_herb') return 100;
-  return quest.final ? 430 : Math.round(AREA[quest.area].recommended * (quest.type === 'boss' ? 1.1 : 1));
+  if (quest.recommended) return quest.recommended;
+  return Math.round(AREA[quest.area].recommended * (quest.type === 'boss' ? 1.1 : 1));
 }

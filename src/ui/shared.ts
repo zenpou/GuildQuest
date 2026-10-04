@@ -207,7 +207,7 @@ export function viewHome() {
           ? div(
             'card home-card home-history',
             h('h2', null, '直近の冒険'),
-            div(null, `${QUEST[state.history[0].questId].name}:${state.history[0].success ? '成功' : '未達成'}`),
+            div(null, `${QUEST[state.history[0].questId].name}:${state.history[0].success ? '成功' : state.history[0].wiped ? '全滅' : state.history[0].retreated ? '撤退' : '未達成'}`),
             h('button', { onclick: () => { ui.selLog = histKey(state.history[0]); go('log'); } }, 'ログを読む'),
           )
           : null,
@@ -351,14 +351,13 @@ export function viewDispatch() {
     const locked = !questUnlocked(state, qq);
     const selected = d.questId === qq.id;
     if (qq.area !== previousArea) {
-      questCards.push(h('h3', { class: 'dispatch-area-heading' }, AREA[qq.area].name,
-        span('small dim', ` / 推奨エリア戦力 ${AREA[qq.area].recommended}`)));
+      questCards.push(h('h3', { class: 'dispatch-area-heading' }, AREA[qq.area].name));
       previousArea = qq.area;
     }
     const el = div(`card dispatch-quest-card ${selected ? 'sel' : ''} ${locked ? 'locked' : ''}`.trim(),
       div('dispatch-quest-card-heading',
         h('span', { class: 'dispatch-select-mark', 'aria-hidden': 'true' }, selected ? '✓' : '○'),
-        div('dispatch-quest-card-title', h('b', null, qq.name), span('small dim', `${qq.days}日 ・${{ gather: '採取', hunt: '討伐', explore: '探索', boss: 'ボス' }[qq.type]}`)),
+        div('dispatch-quest-card-title', h('b', null, qq.name), span('small dim', `${qq.days}日 ・${{ gather: '採取', hunt: '討伐', explore: '探索', boss: 'ボス' }[qq.type]} ・目安${questRecommendedPower(qq)}`)),
         span('gold', `${qq.reward}G`)),
       div('small', locked ? `🔒 評判${qq.unlockRep}で解放（現在${state.rep}）` : qq.desc),
       qq.final ? div('small note', '★ 最終目標') : null,
@@ -484,7 +483,9 @@ export function previewCard(): HTMLElement {
     ].filter(Boolean) as HTMLElement[] : [];
     preview = div('card dispatch-preview-card',
       h('h2', null, '見込み'),
-      div('dispatch-power-note small dim', q.id === 'q_herb' ? '採取の得意な仲間を編成しましょう。' : '4人編成の目安。疲労・回復手段で変わります。'),
+      div('dispatch-power-note small dim', q.id === 'q_herb' ? '採取の得意な仲間を編成しましょう。'
+        : q.type === 'gather' ? '4人編成の目安。集まる量は採取の得意な仲間で決まります。'
+          : '4人編成の目安。疲労・回復手段で変わります。'),
       div('pbar', h('div', { class: 'fill', style: `width:${Math.min(100, (pw / Math.max(rec * 1.4, 1)) * 100)}%` }), h('div', { class: 'mark', style: `left:${(1 / 1.4) * 100}%` }), div('label', `戦力${pw} / 戦力の目安${rec}（${verdict}）`)),
       div('small dim', `${AREA[q.area].name}:${AREA[q.area].desc}`),
       div('small', { style: 'margin:4px 0' } as any, `回復役: ${hasHealer ? 'あり' : 'なし'} ・リーダー: ${leader ? `${leader.name}(${PERSONALITY[leader.personality].name}:撤退${PERSONALITY[leader.personality].retreatBias > 0.1 ? 'しやすい' : PERSONALITY[leader.personality].retreatBias < -0.1 ? 'しにくい' : '普通'})` : '-'}`),
@@ -505,9 +506,15 @@ export function policyCard(): HTMLElement {
     d.policy = 'standard'; d.potions = 0;
     return div('card', h('h3', null, 'まずは基本の派遣'), div('dim small', '標準方針で出発します。行動方針と回復薬は3日目から選べます。'));
   }
+  // 討伐数・採取量は方針で大きく変わるのに、方針の説明だけでは読み取れない。
+  const questType = d.questId ? QUEST[d.questId].type : null;
+  const policyHint = questType === 'hunt' ? '討伐依頼は「強敵優先」だと遭遇が増え、目標数に届きやすくなります(戦闘が増えるぶん負傷も増えます)。'
+    : questType === 'gather' ? '採取依頼は「探索優先」だと採取の機会が少し増えます。'
+      : null;
   const policyBox = div('card', h('h3', null, '行動方針'),
     div('policy-btns', ...POLICIES.map((p) => h('button', { class: d.policy === p.id ? 'on' : '', title: p.desc, onclick: () => { d.policy = p.id; render(); } }, p.name))),
     div('small dim', { style: 'margin-top:6px' } as any, POLICY[d.policy].desc),
+    policyHint ? div('small note dispatch-policy-hint', { style: 'margin-top:6px' } as any, policyHint) : null,
     div('row', { style: 'margin-top:8px' } as any, span(null, `回復薬(${POTION_PRICE}G/本):`),
       h('button', { onclick: () => { d.potions = Math.max(0, d.potions - 1); render(); } }, '−'), span('gold', `${d.potions}本`),
       h('button', { onclick: () => { d.potions = Math.min(6, d.potions + 1); render(); } }, '＋'), span('dim small', d.potions ? `(${d.potions * POTION_PRICE}G)` : '')));

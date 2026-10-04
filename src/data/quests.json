@@ -12,6 +12,7 @@
     "reward": 90,
     "exp": 20,
     "unlockRep": 0,
+    "recommended": 100,
     "desc": "薬屋から。薬草を4束。危険は少ないが、見つける目が要る。"
   },
   {
@@ -21,13 +22,13 @@
     "type": "hunt",
     "target": {
       "enemy": "goblin",
-      "n": 3
+      "n": 2
     },
     "days": 1,
     "reward": 140,
     "exp": 30,
     "unlockRep": 0,
-    "desc": "畑を荒らすゴブリンを3体。まずは腕試し。"
+    "desc": "畑を荒らすゴブリンを2体。まずは腕試し。"
   },
   {
     "id": "q_patrol",
@@ -54,6 +55,7 @@
     "reward": 280,
     "exp": 55,
     "unlockRep": 5,
+    "recommended": 290,
     "desc": "街道を脅かす狼を4頭。素早い相手に前衛が耐えられるか。"
   },
   {
@@ -69,6 +71,7 @@
     "reward": 250,
     "exp": 60,
     "unlockRep": 8,
+    "recommended": 230,
     "desc": "坑道で鉱石を6個。採取の腕と護衛の両方が要る。"
   },
   {
@@ -81,6 +84,7 @@
     "reward": 230,
     "exp": 65,
     "unlockRep": 8,
+    "recommended": 250,
     "desc": "落盤や罠を確認しながら奥まで歩く。探索能力が物を言う。"
   },
   {
@@ -123,6 +127,7 @@
     "reward": 430,
     "exp": 120,
     "unlockRep": 20,
+    "recommended": 310,
     "desc": "灰竜の遺跡を調べる。番兵が多く、消耗が激しい。"
   },
   {
@@ -138,6 +143,7 @@
     "reward": 650,
     "exp": 130,
     "unlockRep": 20,
+    "recommended": 290,
     "desc": "遺跡から古代の遺物を3つ。高く売れる。"
   },
   {
@@ -153,6 +159,7 @@
     "reward": 2000,
     "exp": 300,
     "unlockRep": 25,
+    "recommended": 430,
     "final": true,
     "desc": "古い水路を塞ぐ灰竜を討伐する。街の水を取り戻すための大仕事。戦力だけでなく、疲労・負傷・回復薬も確かめたい。"
   }

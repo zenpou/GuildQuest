@@ -35,6 +35,8 @@ export interface QuestDef {
   id: string; name: string; area: string; type: 'gather' | 'hunt' | 'explore' | 'boss';
   target: { item?: string; enemy?: string; n?: number };
   days: number; reward: number; exp: number; unlockRep: number; desc: string; final?: boolean;
+  /** 4人編成での戦力目安。未指定なら探索地の推奨戦力から求める。 */
+  recommended?: number;
 }
 export interface FacilityDef { id: string; name: string; desc: string; maxLevel: number; costs: number[]; effectText: string[] }
 export interface PolicyDef {
