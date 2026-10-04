@@ -1,0 +1,651 @@
+[
+  {
+    "id": "aldo_bow",
+    "char": "aldo",
+    "title": "アルド、弓を握る",
+    "cond": {
+      "job": "ranger",
+      "minDay": 2
+    },
+    "lines": [
+      {
+        "speaker": "アルド",
+        "text": "……不思議なんです。弓を持つと、手が迷わない。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "{name}",
+        "text": "試してみようと言ったのは僕だけど、弓を引いて、続けると決めたのは君自身だよ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "アルド",
+        "text": "剣を捨てるのが怖かった。でも、あなたが『戻ってもいい』と言ってくれたから……ありがとうございます。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "happy",
+            "position": "left",
+            "motion": "nod",
+            "motionAt": "ありがとうございます"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "(きっかけを渡しただけのつもりが、ずいぶん大きく受け取られてしまった……。)",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      }
+    ],
+    "effects": {
+      "loyalty": 10,
+      "rep": 1
+    }
+  },
+  {
+    "id": "aldo_caution",
+    "char": "aldo",
+    "title": "慎重の理由",
+    "cond": {
+      "minExpeditions": 4
+    },
+    "lines": [
+      {
+        "speaker": "アルド",
+        "text": "僕が慎重なのは、昔、焦って前に出て、仲間に怪我をさせてしまったからなんです。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "mina",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "ミナ",
+        "text": "……アルド。あれは、アルド一人のせいじゃないよ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "thoughtful",
+            "position": "right",
+            "motion": "shake",
+            "motionAt": "アルド一人のせいじゃない"
+          },
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "話してくれてありがとう。慎重に考えて、引き返す判断も、仲間を守る仕事だよ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "right"
+          },
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      }
+    ],
+    "effects": {
+      "loyalty": 6,
+      "relation": {
+        "with": "mina",
+        "delta": 5
+      }
+    }
+  },
+  {
+    "id": "mina_herb",
+    "char": "mina",
+    "title": "ミナの薬草知識",
+    "cond": {
+      "minExpeditions": 2
+    },
+    "lines": [
+      {
+        "speaker": "ミナ",
+        "text": "道端の草って、意外と薬になるんですよ。これは傷に、こちらは熱に。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "アルド",
+        "text": "ミナの薬草袋、いつも重いんだよな……",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "happy",
+            "position": "right"
+          },
+          {
+            "character": "mina",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "薬草の見分け方はミナに教わろう。重い袋は、みんなで分けて持とう。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          },
+          {
+            "character": "mina",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      }
+    ],
+    "effects": {
+      "loyalty": 5,
+      "relation": {
+        "with": "aldo",
+        "delta": 3
+      }
+    }
+  },
+  {
+    "id": "mina_worry",
+    "char": "mina",
+    "title": "ミナの心配",
+    "cond": {
+      "allyInjured": true
+    },
+    "lines": [
+      {
+        "speaker": "ミナ",
+        "text": "……あの、ギルドマスター。怪我をした人のお見舞いに、行ってもいいですか？",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "{name}",
+        "text": "もちろん。見舞いも大事な仕事だよ。でも、ミナが無理をしない範囲でね。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right",
+            "motion": "nod",
+            "motionAt": "もちろん"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミナ",
+        "text": "(ギルドマスターは、きっと誰も取り残さない人なんだ……)",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      }
+    ],
+    "effects": {
+      "loyalty": 8,
+      "rep": 1
+    }
+  },
+  {
+    "id": "lina_lost",
+    "char": "lina",
+    "title": "迷子のリナ",
+    "cond": {
+      "minExpeditions": 3
+    },
+    "lines": [
+      {
+        "speaker": "ミレイ",
+        "text": "リナさん、また道に迷って、ギルドの前を三周していましたよ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "lina",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "リナ",
+        "text": "ち、違うし！ 景色を堪能してただけだし！",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "thoughtful",
+            "position": "right",
+            "motion": "recoil",
+            "motionAt": "ち、違うし"
+          },
+          {
+            "character": "mirei",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "(探索は得意なのに、方向音痴か……。人の得意不得意は、数字だけじゃ分からないな。)",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "lina",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      }
+    ],
+    "effects": {
+      "loyalty": 3,
+      "revealTrait": "directionless"
+    }
+  },
+  {
+    "id": "lina_money",
+    "char": "lina",
+    "title": "リナの理由",
+    "cond": {
+      "minDay": 5
+    },
+    "lines": [
+      {
+        "speaker": "リナ",
+        "text": "……内緒だよ。稼いだお金の半分は、孤児院へ送ってるんだ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "bruno",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "ブルーノ",
+        "text": "ほう。稼いだ金を、自分だけのものにしないとはな。感心だ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "neutral",
+            "position": "right"
+          },
+          {
+            "character": "lina",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "リナ",
+        "text": "うるさい、おじさん！",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "thoughtful",
+            "position": "left",
+            "motion": "shake",
+            "motionAt": "うるさい"
+          },
+          {
+            "character": "bruno",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "(報酬を気にする理由にも、数字には出ない事情がある。……本人が話すまで、決めつけないでおこう。)",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "right"
+          },
+          {
+            "character": "lina",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      }
+    ],
+    "effects": {
+      "loyalty": 8,
+      "relation": {
+        "with": "bruno",
+        "delta": 5
+      }
+    }
+  },
+  {
+    "id": "bruno_glory",
+    "char": "bruno",
+    "title": "ブルーノの武勇伝",
+    "cond": {
+      "minDay": 3
+    },
+    "lines": [
+      {
+        "speaker": "ブルーノ",
+        "text": "十年前、この森の大猪を一人で仕留めたのは、この俺だ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "lina",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "リナ",
+        "text": "それ、聞くの五回目〜。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "thoughtful",
+            "position": "right"
+          },
+          {
+            "character": "bruno",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミレイ",
+        "text": "ブルーノさん、その話は記録に残しておきます。新人が前に立つときの参考になりますから。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "(武勇伝を聞いていただけなのに……でも、本人が少し嬉しそうなら、今日はそれでいい。)",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "right"
+          },
+          {
+            "character": "mirei",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      }
+    ],
+    "effects": {
+      "loyalty": 4,
+      "rep": 1,
+      "relation": {
+        "with": "lina",
+        "delta": -2
+      }
+    }
+  },
+  {
+    "id": "bruno_knee",
+    "char": "bruno",
+    "title": "膝の話",
+    "cond": {
+      "minExpeditions": 5,
+      "minLevel": 3
+    },
+    "lines": [
+      {
+        "speaker": "ブルーノ",
+        "text": "……実はな。膝が、もう長くはもたん。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "{name}",
+        "text": "話してくれてありがとうございます。数字だけでは、膝の痛みまでは分かりません。無理を重ねない働き方を、一緒に考えさせてください。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          },
+          {
+            "character": "bruno",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ブルーノ",
+        "text": "……お前さんは、数字で切り捨てずに、俺の話まで聞こうとしているのだな。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "(数字だけで分かった気にならないようにしよう。本人が続けられる働き方を、一緒に考えるんだ。)",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      }
+    ],
+    "effects": {
+      "loyalty": 12,
+      "rep": 2
+    }
+  }
+]

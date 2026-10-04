@@ -1,0 +1,337 @@
+[
+  {
+    "id": "combat_generic",
+    "kind": "combat",
+    "weight": 5,
+    "areas": null,
+    "params": {},
+    "texts": [
+      "{enemy}と遭遇した。",
+      "物陰から{enemy}が現れた。",
+      "{a}が足を止めた。「……何か来る」姿を現したのは{enemy}だった。",
+      "前方に{enemy}の気配。{leader}が手で合図し、全員が武器を構えた。"
+    ]
+  },
+  {
+    "id": "combat_ambush",
+    "kind": "combat",
+    "weight": 2,
+    "areas": [
+      "forest",
+      "mine"
+    ],
+    "params": {
+      "ambush": true
+    },
+    "texts": [
+      "物陰から{enemy}が飛び出してきた。不意打ちだ！",
+      "気配に気づいたときには、{enemy}がすぐそばまで迫っていた。"
+    ]
+  },
+  {
+    "id": "treasure_chest",
+    "kind": "treasure",
+    "weight": 4,
+    "areas": null,
+    "params": {
+      "gold": [
+        30,
+        80
+      ],
+      "trap": 0.3,
+      "trapDmg": [
+        6,
+        12
+      ],
+      "itemChance": 0.25
+    },
+    "texts": [
+      "道の脇に古びた宝箱を見つけた。",
+      "{a}が物陰に宝箱を見つけた。"
+    ],
+    "ok": [
+      "中身は無事に回収できた。",
+      "蓋を開けると、金貨がざくざく入っていた。"
+    ],
+    "ng": [
+      "蓋を開けた瞬間、仕掛けが作動した！",
+      "鍵穴をいじった{a}の指が、何かのスイッチに触れた。"
+    ]
+  },
+  {
+    "id": "treasure_hidden",
+    "kind": "treasure",
+    "weight": 2,
+    "areas": [
+      "mine",
+      "ruins"
+    ],
+    "params": {
+      "gold": [
+        50,
+        110
+      ],
+      "trap": 0.2,
+      "trapDmg": [
+        8,
+        14
+      ],
+      "itemChance": 0.3
+    },
+    "texts": [
+      "壁の隙間に、古びた革袋が隠されていた。",
+      "崩れた壁の奥に、忘れ去られた小部屋を見つけた。"
+    ],
+    "ok": [
+      "残されていた金品をまとめ、持ち帰ることにした。"
+    ],
+    "ng": [
+      "袋に手を伸ばした{a}の足元が崩れた！"
+    ]
+  },
+  {
+    "id": "gather_herb",
+    "kind": "gather",
+    "weight": 4,
+    "areas": [
+      "forest"
+    ],
+    "params": {
+      "item": "herb",
+      "qty": [
+        2,
+        4
+      ]
+    },
+    "texts": [
+      "道端に薬草が群生していた。",
+      "{a}が「あ、これ薬になるやつ」としゃがみ込んだ。"
+    ],
+    "ok": [
+      "手際よく摘み取り、袋はいっぱいになった。"
+    ],
+    "ng": [
+      "雑草と見分けがつかず、少ししか集められなかった。"
+    ]
+  },
+  {
+    "id": "gather_ore",
+    "kind": "gather",
+    "weight": 4,
+    "areas": [
+      "mine"
+    ],
+    "params": {
+      "item": "ore",
+      "qty": [
+        2,
+        4
+      ]
+    },
+    "texts": [
+      "壁面にきらりと光る鉱脈が見えた。",
+      "{a}がつるはしを構えた。「ここ、掘れそうだ」"
+    ],
+    "ok": [
+      "いい音を立てて、鉱石がごろごろ出てきた。"
+    ],
+    "ng": [
+      "硬くて掘り進められず、欠片しか取れなかった。"
+    ]
+  },
+  {
+    "id": "gather_relic",
+    "kind": "gather",
+    "weight": 3,
+    "areas": [
+      "ruins"
+    ],
+    "params": {
+      "item": "relic",
+      "qty": [
+        1,
+        1
+      ]
+    },
+    "texts": [
+      "崩れた祭壇の上に、何かの遺物が転がっていた。",
+      "{a}が砂をはらうと、古代の細工物が現れた。"
+    ],
+    "ok": [
+      "傷つけないよう丁寧に回収した。"
+    ],
+    "ng": [
+      "触れた途端に砕けてしまった。もったいない。"
+    ]
+  },
+  {
+    "id": "trap_spike",
+    "kind": "trap",
+    "weight": 3,
+    "areas": null,
+    "params": {
+      "dmg": [
+        6,
+        14
+      ],
+      "dc": 12
+    },
+    "texts": [
+      "足元に、土に隠された細い縄が見える。",
+      "{a}が違和感に気づいて立ち止まった。地面の一部だけ、妙に踏み固められている。"
+    ],
+    "ok": [
+      "{a}が慎重に仕掛けを外し、事なきを得た。"
+    ],
+    "ng": [
+      "気づくのが遅れ、杭が飛び出した！"
+    ]
+  },
+  {
+    "id": "trap_rockfall",
+    "kind": "trap",
+    "weight": 3,
+    "areas": [
+      "mine",
+      "ruins"
+    ],
+    "params": {
+      "dmg": [
+        8,
+        16
+      ],
+      "dc": 14
+    },
+    "texts": [
+      "天井から小石がぱらぱらと降ってきた。",
+      "梁の軋む音がする。嫌な予感がした。"
+    ],
+    "ok": [
+      "{a}の合図で全員が飛び退き、崩落をやり過ごした。"
+    ],
+    "ng": [
+      "避けきれず、落石が{b}を直撃した！"
+    ]
+  },
+  {
+    "id": "lost_path",
+    "kind": "lost",
+    "weight": 2,
+    "areas": null,
+    "params": {
+      "fatigue": 8
+    },
+    "texts": [
+      "この目印を通るのは、もう三度目のような気がする。",
+      "地図と地形が合わない。{leader}が地図の向きを変え、周囲を見比べた。",
+      "分かれ道で意見が割れ、結局{a}の勘を頼りに進んだ。"
+    ]
+  },
+  {
+    "id": "merchant",
+    "kind": "merchant",
+    "weight": 1.5,
+    "areas": [
+      "forest",
+      "mine"
+    ],
+    "params": {},
+    "texts": [
+      "旅の商人と出会った。「安くしとくよ」",
+      "行商人が荷車を引いてやってきた。"
+    ]
+  },
+  {
+    "id": "injured_traveler",
+    "kind": "help",
+    "weight": 1.5,
+    "areas": [
+      "forest",
+      "mine"
+    ],
+    "params": {
+      "gold": [
+        20,
+        60
+      ],
+      "rep": 1
+    },
+    "texts": [
+      "道端で足をくじいた旅人がうずくまっていた。",
+      "通りがかりの老人が荷物ごと座り込んでいる。"
+    ]
+  },
+  {
+    "id": "ruin_site",
+    "kind": "ruin",
+    "weight": 1.5,
+    "areas": [
+      "ruins",
+      "forest"
+    ],
+    "params": {
+      "gold": [
+        60,
+        140
+      ],
+      "itemChance": 0.25
+    },
+    "texts": [
+      "苔むした石の入口を見つけた。古い遺構のようだ。",
+      "木々の間に、崩れかけた石造りの小祠がある。"
+    ],
+    "ok": [
+      "中は荒らされておらず、奉納品らしき財宝が残っていた。"
+    ],
+    "ng": [
+      "中には何も……と思った瞬間、守護者が動き出した！"
+    ]
+  },
+  {
+    "id": "hidden_path",
+    "kind": "hidden",
+    "weight": 1.5,
+    "areas": null,
+    "params": {},
+    "texts": [
+      "{a}が岩陰に、人ひとり通れる隙間を見つけた。",
+      "物陰から風が抜けてくる。{a}が確かめると、奥に細い通り道があった。"
+    ],
+    "ok": [
+      "近道を抜け、体力を温存できた。"
+    ],
+    "ng": [
+      "ただの行き止まりだった。"
+    ]
+  },
+  {
+    "id": "chat_banter",
+    "kind": "chat",
+    "weight": 3,
+    "areas": null,
+    "params": {},
+    "texts": [
+      ""
+    ]
+  },
+  {
+    "id": "quarrel_loot",
+    "kind": "quarrel",
+    "weight": 4,
+    "areas": null,
+    "params": {},
+    "texts": [
+      ""
+    ]
+  },
+  {
+    "id": "cooperate_help",
+    "kind": "cooperate",
+    "weight": 2,
+    "areas": null,
+    "params": {},
+    "texts": [
+      ""
+    ]
+  }
+]

@@ -1,0 +1,166 @@
+{
+  "members": [
+    {
+      "key": "aldo",
+      "name": "アルド",
+      "age": 19,
+      "level": 1,
+      "job": "fighter",
+      "icon": "🗡",
+      "base": {
+        "hp": 66,
+        "atk": 9,
+        "def": 9,
+        "mag": 5,
+        "spd": 8,
+        "dex": 12,
+        "scout": 9,
+        "gather": 8
+      },
+      "apt": {
+        "fighter": 22,
+        "ranger": 92,
+        "mage": 30
+      },
+      "growth": 1.15,
+      "personality": "cautious",
+      "traits": [
+        {
+          "id": "keen",
+          "revealed": false
+        }
+      ],
+      "loyalty": 65,
+      "bio": "田舎の道場で剣士を志し、父から継いだ剣で三年稽古を重ねた青年。慎重すぎて踏み込めないせいだと悩んでいた。仕事を断られた帰りに主人公と出会い、初めて弓を試した。",
+      "quote": "剣は……向いてないのかもしれません。でも、他に何もできないんです。"
+    },
+    {
+      "key": "mina",
+      "name": "ミナ",
+      "age": 17,
+      "level": 1,
+      "job": "mage",
+      "icon": "🌿",
+      "base": {
+        "hp": 52,
+        "atk": 5,
+        "def": 5,
+        "mag": 14,
+        "spd": 7,
+        "dex": 9,
+        "scout": 8,
+        "gather": 16
+      },
+      "apt": {
+        "fighter": 15,
+        "ranger": 35,
+        "mage": 88
+      },
+      "growth": 1.3,
+      "personality": "caring",
+      "traits": [
+        {
+          "id": "herbalist",
+          "revealed": true
+        }
+      ],
+      "loyalty": 70,
+      "bio": "アルドの幼なじみで、村の薬草師の孫。薬草の知識は街でも指折り。回復魔法が得意だが、優しすぎて自分のことは後回しにしてしまう。",
+      "quote": "みんな無事？ 痛いところはない？"
+    },
+    {
+      "key": "lina",
+      "name": "リナ",
+      "age": 16,
+      "level": 1,
+      "job": "ranger",
+      "icon": "🪙",
+      "base": {
+        "hp": 50,
+        "atk": 8,
+        "def": 4,
+        "mag": 6,
+        "spd": 12,
+        "dex": 14,
+        "scout": 14,
+        "gather": 10
+      },
+      "apt": {
+        "fighter": 30,
+        "ranger": 80,
+        "mage": 45
+      },
+      "growth": 0.95,
+      "personality": "greedy",
+      "traits": [
+        {
+          "id": "directionless",
+          "revealed": false
+        },
+        {
+          "id": "lucky",
+          "revealed": false
+        }
+      ],
+      "loyalty": 55,
+      "bio": "孤児院育ちの元スリ見習い。金勘定と目端は誰より利くが、なぜか自分の足元の道だけは分からない。宝箱を見ると目の色が変わる。",
+      "quote": "ねえ、あの箱、見に行こうよ。ちょっとだけ！"
+    },
+    {
+      "key": "bruno",
+      "name": "ブルーノ",
+      "age": 34,
+      "level": 2,
+      "job": "fighter",
+      "icon": "🛡",
+      "base": {
+        "hp": 78,
+        "atk": 12,
+        "def": 12,
+        "mag": 4,
+        "spd": 5,
+        "dex": 7,
+        "scout": 6,
+        "gather": 5
+      },
+      "apt": {
+        "fighter": 90,
+        "ranger": 25,
+        "mage": 10
+      },
+      "growth": 0.8,
+      "personality": "proud",
+      "traits": [
+        {
+          "id": "sturdy",
+          "revealed": true
+        }
+      ],
+      "loyalty": 50,
+      "bio": "かつては街で名の知れた剣士。膝を痛めてから依頼が減り、酒場で武勇伝を語る日々。腕は確かだが、日給は新人の倍近くかかる。",
+      "quote": "俺がいた頃のこの街はな……いや、まあいい。前は任せろ。"
+    }
+  ],
+  "relations": [
+    {
+      "a": "aldo",
+      "b": "mina",
+      "value": 28
+    },
+    {
+      "a": "mina",
+      "b": "lina",
+      "value": 6
+    },
+    {
+      "a": "lina",
+      "b": "bruno",
+      "value": -14
+    },
+    {
+      "a": "aldo",
+      "b": "bruno",
+      "value": 6
+    }
+  ]
+}

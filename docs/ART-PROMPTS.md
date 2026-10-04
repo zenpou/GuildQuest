@@ -1,0 +1,16 @@
+# スチル生成記録
+
+2026-10-03 / 内蔵 image_gen を使用。2点を生成し、ゲーム画面で確認後にWebPへ圧縮。
+
+- 公開素材: `public/art/guild-dawn.webp`, `public/art/ruins-vow.webp`
+- 元PNG: `artifacts/source-art/guild-dawn.png`, `artifacts/source-art/ruins-vow.png`
+- 2枚目は1枚目を人物・画風の参照として使用。
+- 終章の灰竜は街から退けられた表現。ゲーム上の「討伐」は竜を退け水路を取り戻した意味で扱い、死亡描写はしない。
+
+## ギルドの朝
+
+Use case: illustration-story. Create one premium Japanese cozy fantasy RPG visual novel story still, landscape 1536x1024. Painterly anime illustration, intricate warm wooden small adventurers guild office in the medieval town of Hart, morning golden light, teal shadows, muted parchment and forest green palette, expressive restrained faces. Five people gather at an oak dispatch desk looking at a map and fresh medicinal herbs with sense of found family and hopeful new beginning. Aldo: 19-year-old slim young adult man, tousled chestnut hair, amber eyes, olive hooded cloak, cream tunic, simple short bow over shoulder, nervous hopeful smile. Mina: 17-year-old girl, braided dark brown hair, sage green healer dress, cream cape, herb satchel, practical modest fully covered clothing. Lina: 16-year-old girl, short copper bob hair, rust scarf, navy scout tunic, leather coin pouch, playful grin, fully covered practical clothing. Bruno: 34-year-old broad adult man, dark cropped hair and beard, worn steel breastplate, wine red mantle, relaxed protective demeanor. Mirei: 24-year-old adult woman receptionist, long dark blue hair tied low, round glasses, ivory blouse and teal vest, holding a ledger. Focus on Aldo and the bow in foreground and party gathered naturally. No text, letters, logo, watermarks, UI, collage, panels, modern devices, pointed ears, exaggerated sexual characteristics. Leave bottom 15 percent mainly desk and herbs for UI overlay. Polished narrative illustration, not chibi. Save image for game scene guild-dawn.
+
+## 帰還の約束
+
+Use case: illustration-story. Create a SECOND distinct wide 1536x1024 story still for the same cozy fantasy RPG. Use supplied guild illustration ONLY as character identity/style reference: retain exactly Aldo chestnut young adult man olive cloak and bow, Mina brunette braided healer sage green dress cream cape herb satchel, Lina copper bob teenage scout navy tunic rust scarf, Bruno adult bearded broad man worn steel breastplate wine red mantle. Four adventurers ONLY, no receptionist. Fresh composition: they stand together on an ancient stone aqueduct ridge overlooking a medieval town at sunset after completing a dangerous journey. Side/three-quarter view, medium-wide cinematic composition, all four faces visible, quiet relieved emotion, Aldo in left foreground lowering his bow, Mina holding herb satchel to chest, Lina cheerfully pointing to lights of town, Bruno at right resting shield on stone. Ancient open water gate and silver stream lead eye toward town; far ruined tower and a vast departing grey dragon silhouette receding into clouds, no violence. Warm gold dusk and deep teal shadows, delicate painterly anime detail matching reference. A homecoming promise, the team finally trusts each other. Every character modest practical clothing, correct ages same faces/colors. No text, words, logo, UI, borders, collage. Leave lower fifth visually quiet stone parapet for dialogue box. This is a full new location and camera shot, not a recolor of the reference.

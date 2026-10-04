@@ -1,0 +1,14 @@
+[
+  {"id":"cautious","name":"慎重","desc":"危険を避け、罠を警戒し、早めに撤退を口にする。",
+   "retreatBias":0.15,"fightBias":-0.1,"lootBias":0,"trapCare":0.2,"cover":0.05,"likes":["caring"],"dislikes":["brave","greedy"]},
+  {"id":"brave","name":"勇敢","desc":"強敵にも挑み、仲間を守ろうとする。撤退判断は遅い。",
+   "retreatBias":-0.2,"fightBias":0.2,"lootBias":0,"trapCare":-0.1,"cover":0.2,"likes":["caring","brave"],"dislikes":["timid"]},
+  {"id":"greedy","name":"強欲","desc":"宝箱と高報酬に目がない。戦利品で揉めやすい。",
+   "retreatBias":0,"fightBias":0.05,"lootBias":0.3,"trapCare":-0.05,"cover":0,"likes":["proud"],"dislikes":["caring","cautious"]},
+  {"id":"caring","name":"仲間思い","desc":"負傷者を助け、仲間をかばう。関係値が上がりやすい。",
+   "retreatBias":0.05,"fightBias":0,"lootBias":-0.1,"trapCare":0.05,"cover":0.35,"likes":["timid","brave","cautious"],"dislikes":["greedy"]},
+  {"id":"proud","name":"自信家","desc":"成功すると調子に乗り、失敗すると責任転嫁することがある。",
+   "retreatBias":-0.1,"fightBias":0.1,"lootBias":0.1,"trapCare":-0.1,"cover":0.05,"likes":["greedy"],"dislikes":["proud","brave"]},
+  {"id":"timid","name":"臆病","desc":"戦いを避け、危険の察知が得意。強敵からはすぐ逃げる。",
+   "retreatBias":0.25,"fightBias":-0.25,"lootBias":-0.05,"trapCare":0.15,"cover":0,"likes":["caring","cautious"],"dislikes":["proud"]}
+]

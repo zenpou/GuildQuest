@@ -1,0 +1,26 @@
+{
+  "name": "guildquest",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/export-story.cjs && tsc --noEmit && vite build",
+    "test": "vitest run",
+    "sim": "tsx scripts/sim.ts",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:browser": "tsx scripts/story-fixtures.ts && node scripts/browser-check.cjs",
+    "test:story": "tsx scripts/story-fixtures.ts && node scripts/story-browser-check.cjs",
+    "test:effects": "node scripts/story-effects-check.cjs",
+    "test:alignment": "node scripts/story-alignment-check.cjs",
+    "test:returns": "tsx scripts/return-dialogue-check.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "playwright": "^1.62.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  }
+}

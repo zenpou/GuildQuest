@@ -1,0 +1,159 @@
+[
+  {
+    "id": "q_herb",
+    "name": "薬草採取",
+    "area": "forest",
+    "type": "gather",
+    "target": {
+      "item": "herb",
+      "n": 4
+    },
+    "days": 1,
+    "reward": 90,
+    "exp": 20,
+    "unlockRep": 0,
+    "desc": "薬屋から。薬草を4束。危険は少ないが、見つける目が要る。"
+  },
+  {
+    "id": "q_goblin",
+    "name": "ゴブリン退治",
+    "area": "forest",
+    "type": "hunt",
+    "target": {
+      "enemy": "goblin",
+      "n": 3
+    },
+    "days": 1,
+    "reward": 140,
+    "exp": 30,
+    "unlockRep": 0,
+    "desc": "畑を荒らすゴブリンを3体。まずは腕試し。"
+  },
+  {
+    "id": "q_patrol",
+    "name": "森の見回り",
+    "area": "forest",
+    "type": "explore",
+    "target": {},
+    "days": 2,
+    "reward": 170,
+    "exp": 40,
+    "unlockRep": 0,
+    "desc": "森を一巡りして異常がないか確認する。最後まで歩き切れば達成。"
+  },
+  {
+    "id": "q_wolf",
+    "name": "森狼の群れ",
+    "area": "forest",
+    "type": "hunt",
+    "target": {
+      "enemy": "wolf",
+      "n": 4
+    },
+    "days": 2,
+    "reward": 280,
+    "exp": 55,
+    "unlockRep": 5,
+    "desc": "街道を脅かす狼を4頭。素早い相手に前衛が耐えられるか。"
+  },
+  {
+    "id": "q_ore",
+    "name": "鉱石の採掘手伝い",
+    "area": "mine",
+    "type": "gather",
+    "target": {
+      "item": "ore",
+      "n": 6
+    },
+    "days": 2,
+    "reward": 250,
+    "exp": 60,
+    "unlockRep": 8,
+    "desc": "坑道で鉱石を6個。採取の腕と護衛の両方が要る。"
+  },
+  {
+    "id": "q_safety",
+    "name": "坑道の安全確認",
+    "area": "mine",
+    "type": "explore",
+    "target": {},
+    "days": 2,
+    "reward": 230,
+    "exp": 65,
+    "unlockRep": 8,
+    "desc": "落盤や罠を確認しながら奥まで歩く。探索能力が物を言う。"
+  },
+  {
+    "id": "q_skeleton",
+    "name": "骸骨兵の掃討",
+    "area": "mine",
+    "type": "hunt",
+    "target": {
+      "enemy": "skeleton",
+      "n": 4
+    },
+    "days": 2,
+    "reward": 330,
+    "exp": 80,
+    "unlockRep": 12,
+    "desc": "坑道奥の骸骨兵を4体。硬いので火力が要る。"
+  },
+  {
+    "id": "q_golem",
+    "name": "坑道の主",
+    "area": "mine",
+    "type": "boss",
+    "target": {
+      "enemy": "golem",
+      "n": 1
+    },
+    "days": 3,
+    "reward": 600,
+    "exp": 150,
+    "unlockRep": 15,
+    "desc": "坑道最奥のゴーレムを倒す。長期戦になる。回復薬の持ち込みを推奨。"
+  },
+  {
+    "id": "q_survey",
+    "name": "遺跡の調査",
+    "area": "ruins",
+    "type": "explore",
+    "target": {},
+    "days": 3,
+    "reward": 430,
+    "exp": 120,
+    "unlockRep": 20,
+    "desc": "灰竜の遺跡を調べる。番兵が多く、消耗が激しい。"
+  },
+  {
+    "id": "q_relic",
+    "name": "古代の遺物回収",
+    "area": "ruins",
+    "type": "gather",
+    "target": {
+      "item": "relic",
+      "n": 3
+    },
+    "days": 3,
+    "reward": 650,
+    "exp": 130,
+    "unlockRep": 20,
+    "desc": "遺跡から古代の遺物を3つ。高く売れる。"
+  },
+  {
+    "id": "q_drake",
+    "name": "灰竜の討伐",
+    "area": "ruins",
+    "type": "boss",
+    "target": {
+      "enemy": "drake",
+      "n": 1
+    },
+    "days": 3,
+    "reward": 2000,
+    "exp": 300,
+    "unlockRep": 25,
+    "final": true,
+    "desc": "古い水路を塞ぐ灰竜を討伐する。街の水を取り戻すための大仕事。戦力だけでなく、疲労・負傷・回復薬も確かめたい。"
+  }
+]

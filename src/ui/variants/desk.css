@@ -1,0 +1,531 @@
+/* A案「管理卓」: 現在の状態と次の一手を、落ち着いた帳場の配色でまとめる。 */
+.v-desk {
+  min-width: 0;
+}
+
+.v-desk .desk-header {
+  display: grid;
+  grid-template-columns: minmax(170px, auto) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  padding: 12px clamp(14px, 2vw, 24px);
+  background: #172629;
+  border-bottom-color: #566458;
+}
+
+.v-desk .desk-brand,
+.v-desk .desk-actions,
+.v-desk .desk-stats {
+  min-width: 0;
+}
+
+.v-desk .desk-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.v-desk .desk-brand-mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border: 1px solid #c79d5f;
+  border-radius: 10px;
+  background: #20373a;
+  color: #f0c883;
+  font-size: 20px;
+}
+
+.v-desk .desk-brand-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.v-desk .desk-kicker {
+  color: #adbbb2;
+  font-size: 10px;
+  letter-spacing: .16em;
+  white-space: nowrap;
+}
+
+.v-desk .desk-title {
+  overflow: hidden;
+  color: #f0d092;
+  font-size: 18px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.v-desk .desk-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(74px, 1fr));
+  gap: 7px;
+}
+
+.v-desk .desk-stat {
+  min-width: 0;
+  padding: 5px 9px 6px;
+  border-left: 1px solid #4a5b59;
+}
+
+.v-desk .desk-stat-label {
+  display: block;
+  color: #aebdb7;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.v-desk .desk-stat-value {
+  display: block;
+  overflow: hidden;
+  color: #f1eadc;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.v-desk .desk-stat-value.bad {
+  color: var(--bad);
+}
+
+.v-desk .desk-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.v-desk .desk-actions button {
+  white-space: nowrap;
+}
+
+.v-desk .desk-secondary {
+  background: transparent;
+  color: var(--dim);
+  font-weight: 600;
+}
+
+.v-desk .desk-next {
+  min-width: 118px;
+}
+
+.v-desk .desk-tabs {
+  padding-right: clamp(14px, 2vw, 24px);
+  padding-left: clamp(14px, 2vw, 24px);
+  gap: 5px;
+  background: #172629;
+  border-bottom-color: #566458;
+}
+
+.v-desk .desk-tabs .tab {
+  min-height: 44px;
+  padding: 8px 15px;
+}
+
+.v-desk .desk-tabs .tab.active {
+  background: #1d2c2e;
+  border-color: #6c7b70;
+  border-bottom-color: #1d2c2e;
+}
+
+.v-desk .desk-tabs .badge {
+  background: #bd8151;
+}
+
+.v-desk .desk-main {
+  width: 100%;
+  max-width: none;
+  padding: clamp(12px, 2vw, 20px);
+}
+
+.v-desk .campaign-hero {
+  height: auto;
+  min-height: 220px;
+  margin-bottom: 16px;
+  border-color: #6d755f;
+}
+
+.v-desk .campaign-caption {
+  max-width: 680px;
+  padding: 22px 28px;
+}
+
+.v-desk .campaign-caption h1 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-size: clamp(22px, 3vw, 34px);
+}
+
+.v-desk .campaign-caption p {
+  margin: 5px 0 12px;
+  line-height: 1.65;
+}
+
+.v-desk .home-columns {
+  align-items: start;
+  gap: 14px;
+}
+
+.v-desk .home-primary,
+.v-desk .home-secondary {
+  min-width: 0;
+}
+
+.v-desk .home-card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.v-desk .home-card h2 {
+  color: #f0d092;
+}
+
+.v-desk .home-status {
+  border-top: 2px solid var(--accent);
+}
+
+.v-desk .home-dispatch {
+  background: #1d2b2d;
+}
+
+.v-desk .home-dispatch .row.between {
+  align-items: flex-start;
+  padding: 5px 0;
+  border-bottom: 1px solid #354648;
+}
+
+.v-desk .home-dispatch .row.between:last-child {
+  border-bottom: 0;
+}
+
+.v-desk .home-goal {
+  border-style: dashed;
+  background: #1c292b;
+}
+
+.v-desk .home-secondary .home-card {
+  background: #1c292b;
+}
+
+.v-desk .home-secondary .home-history button {
+  margin-top: 9px;
+}
+
+.v-desk .home-rumors summary {
+  display: list-item;
+  min-height: 44px;
+  padding: 10px 0;
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.v-desk .home-rumors summary:focus-visible {
+  outline: 3px solid #f4c878;
+  outline-offset: 3px;
+}
+
+.v-desk button {
+  min-height: 44px;
+}
+
+.v-desk button:focus-visible,
+.v-desk [tabindex]:focus-visible {
+  outline: 3px solid #f4c878;
+  outline-offset: 3px;
+}
+
+@media (min-width: 900px) {
+  .v-desk .home-columns {
+    grid-template-columns: minmax(0, 1.65fr) minmax(260px, .9fr);
+  }
+}
+
+@media (max-width: 899px) {
+  .v-desk .home-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .v-desk .desk-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+
+  .v-desk .desk-stats {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .v-desk .desk-actions {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 520px) {
+  .v-desk .desk-header {
+    padding: 10px 12px;
+  }
+
+  .v-desk .desk-brand-mark {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+    font-size: 18px;
+  }
+
+  .v-desk .desk-title {
+    font-size: 16px;
+  }
+
+  .v-desk .desk-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .v-desk .desk-stat {
+    border: 1px solid #3f504f;
+    border-radius: 6px;
+    padding: 5px 8px;
+    background: #1d3032;
+  }
+
+  .v-desk .desk-tabs {
+    padding: 7px 10px 0;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .v-desk .desk-tabs .tab {
+    flex: 0 0 auto;
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+
+  .v-desk .desk-main {
+    padding: 10px;
+  }
+
+  .v-desk .campaign-hero {
+    height: auto;
+    min-height: 220px;
+  }
+
+  .v-desk .campaign-caption {
+    padding: 16px;
+  }
+
+  .v-desk .campaign-caption h1 {
+    font-size: 23px;
+    line-height: 1.3;
+  }
+
+  .v-desk .campaign-caption p {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .v-desk .campaign-caption .row {
+    gap: 5px;
+  }
+}
+
+/* Dispatch is a decision flow: request, plan, then the people who fill it.
+   The grid areas are reordered on phones so the next action follows the
+   player's reading direction. */
+.v-desk .dispatch-layout {
+  display: grid;
+  grid-template-columns: minmax(230px, .92fr) minmax(260px, .95fr) minmax(340px, 1.18fr);
+  grid-template-areas: 'requests adventurers plan';
+  gap: 18px;
+  align-items: start;
+}
+.v-desk .dispatch-requests { grid-area: requests; }
+.v-desk .dispatch-plan { grid-area: plan; }
+.v-desk .dispatch-adventurers { grid-area: adventurers; }
+.v-desk .dispatch-column,
+.v-desk .dispatch-column-inner { min-width: 0; }
+.v-desk .dispatch-column-inner > .card { margin-bottom: 10px; }
+.v-desk .dispatch-step-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 2px 0 12px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #465657;
+}
+.v-desk .dispatch-step-heading h2 {
+  margin: 0 0 2px;
+  color: #f0d092;
+  font-size: 18px;
+}
+.v-desk .dispatch-step-number {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  border: 1px solid #c79d5f;
+  border-radius: 50%;
+  color: #f0d092;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+.v-desk .dispatch-selection-hint {
+  margin: -3px 0 10px;
+  color: #b7c4bc;
+  font-size: 11px;
+}
+.v-desk .dispatch-area-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin: 17px 2px 7px;
+  padding-top: 7px;
+  color: #eac47b;
+  border-top: 1px solid #465657;
+  font-size: 13px;
+}
+.v-desk .dispatch-area-heading:first-of-type { margin-top: 0; border-top: 0; }
+.v-desk .dispatch-quest-card,
+.v-desk .dispatch-member-card {
+  cursor: pointer;
+  transition: border-color .14s ease, background-color .14s ease, box-shadow .14s ease;
+}
+.v-desk .dispatch-quest-card:hover,
+.v-desk .dispatch-member-card:hover,
+.v-desk .dispatch-quest-card:focus-visible,
+.v-desk .dispatch-member-card:focus-visible {
+  border-color: #e0b56a;
+  background: #243537;
+}
+.v-desk .dispatch-quest-card.locked,
+.v-desk .dispatch-member-card.locked {
+  cursor: not-allowed;
+}
+.v-desk .dispatch-quest-card.locked:hover,
+.v-desk .dispatch-member-card.locked:hover {
+  border-color: #3f504f;
+  background: #1c292b;
+}
+.v-desk .dispatch-quest-card-heading,
+.v-desk .dispatch-member-heading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 7px;
+  min-width: 0;
+}
+.v-desk .dispatch-quest-card-title {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 1px;
+}
+.v-desk .dispatch-quest-card-title b,
+.v-desk .dispatch-member-heading b {
+  overflow-wrap: anywhere;
+}
+.v-desk .dispatch-select-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  border: 1px solid #687972;
+  border-radius: 50%;
+  color: #aebdb7;
+  font-size: 13px;
+  font-weight: 800;
+}
+.v-desk .dispatch-quest-card.sel .dispatch-select-mark,
+.v-desk .dispatch-member-card.sel .dispatch-select-mark {
+  color: #263115;
+  background: #e0b56a;
+  border-color: #f0d092;
+}
+.v-desk .dispatch-quest-card.sel,
+.v-desk .dispatch-member-card.sel {
+  background: #283c3d;
+  border-color: #e0b56a;
+  box-shadow: 0 0 0 1px #e0b56a inset;
+}
+.v-desk .dispatch-party-status {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin: -2px 0 10px;
+  padding: 8px 10px;
+  background: #1c2b2d;
+  border: 1px solid #465657;
+  border-radius: 7px;
+}
+.v-desk .dispatch-party-status strong { color: #f0d092; font-size: 15px; }
+.v-desk .dispatch-party-status-plan { margin-top: -2px; }
+.v-desk .dispatch-slots { margin-bottom: 12px; }
+.v-desk .dispatch-slot { margin-bottom: 8px; }
+.v-desk .dispatch-slot-empty {
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+  padding: 10px;
+  border-color: #52615c;
+  background: #1b292b;
+}
+.v-desk .dispatch-preview-card h2 { margin-bottom: 3px; }
+.v-desk .dispatch-current-quest { display: flex; flex-direction: column; border-left: 3px solid var(--accent); }
+.v-desk .dispatch-current-quest strong { color: #f0d092; font-size: 18px; }
+.v-desk .dispatch-power-note { margin-bottom: 7px; }
+.v-desk .dispatch-preview-card .warn,
+.v-desk .dispatch-warning { margin-top: 7px; line-height: 1.45; }
+.v-desk .dispatch-return-plan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 10px;
+  margin-top: 10px;
+  padding-top: 9px;
+  border-top: 1px solid #465657;
+}
+.v-desk .dispatch-departure {
+  padding: 12px;
+  background: #25383a;
+  border: 1px solid #7b6a4c;
+  border-radius: 8px;
+}
+.v-desk .dispatch-departure-heading { margin-bottom: 3px; color: #f0d092; }
+.v-desk .dispatch-departure > button { width: 100%; margin-top: 10px; }
+.v-desk .dispatch-member-help { display: block; margin: 10px 2px; line-height: 1.55; }
+.v-desk .pbar .label { overflow: hidden; padding: 0 4px; text-overflow: ellipsis; white-space: nowrap; }
+
+@media (max-width: 979px) {
+  .v-desk .dispatch-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'requests' 'adventurers' 'plan';
+    gap: 16px;
+  }
+  .v-desk .dispatch-step-heading { margin-top: 0; }
+}
+
+@media (max-width: 520px) {
+  .v-desk .dispatch-layout { gap: 13px; }
+  .v-desk .dispatch-step-heading h2 { font-size: 17px; }
+  .v-desk .dispatch-quest-card,
+  .v-desk .dispatch-member-card,
+  .v-desk .dispatch-preview-card,
+  .v-desk .dispatch-departure { padding: 10px; }
+  .v-desk .dispatch-party-status { padding: 7px 9px; }
+  .v-desk .dispatch-quest-card-heading,
+  .v-desk .dispatch-member-heading { gap: 5px; }
+  .v-desk .dispatch-quest-card-heading > .gold { white-space: nowrap; }
+}

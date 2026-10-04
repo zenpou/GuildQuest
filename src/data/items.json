@@ -1,0 +1,7 @@
+[
+  {"id":"herb","name":"薬草","price":12},
+  {"id":"fang","name":"魔物の牙","price":18},
+  {"id":"ore","name":"鉱石","price":28},
+  {"id":"relic","name":"古代の遺物","price":120},
+  {"id":"scale","name":"灰竜の鱗","price":400}
+]

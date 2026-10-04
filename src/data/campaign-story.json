@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "first_desk",
+    "title": "第一章 · 向いている場所",
+    "day": 1,
+    "art": "guild-dawn",
+    "lines": [
+      {
+        "speaker": "ミレイ",
+        "text": "事務所を開ける最初の朝ですね。まずは、依頼を一枚受け付けるところから始めましょう。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "アルド",
+        "text": "剣の稽古は三年続けました。でも、あの日に借りた弓は、不思議なくらい手になじんで……。これを仕事にしても、いいんでしょうか。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "mina",
+            "pose": "neutral",
+            "position": "center"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "一度やってみてから決めよう。合わなければ戻せる。剣の三年まで、捨てる必要はないよ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "happy",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミナ",
+        "text": "薬草採取なら、私も行きます。道を見つける人と、草を見分ける人。二人でできる仕事ですね。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "happy",
+            "position": "right",
+            "motion": "nod",
+            "motionAt": "私も行きます"
+          },
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミレイ",
+        "text": "まず『冒険者』でアルドの職業を狩人に変えましょう。そのあと『派遣』で薬草採取を選んでください。登録の変更に費用はかかりません。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      }
+    ]
+  },
+  {
+    "id": "first_return",
+    "title": "第一章 · おかえりの仕事",
+    "day": 2,
+    "art": "guild-dawn",
+    "lines": [
+      {
+        "speaker": "ミレイ",
+        "text": "依頼の報告を受けるときは、成否と、全員が戻れたかを別々に確かめましょう。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "door"
+      },
+      {
+        "speaker": "アルド",
+        "text": "剣を振っていたころは、足元ばかり気にしていました。今は、遠くを見る練習もしています。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミナ",
+        "text": "薬草の数だけでなく、みんなの顔色も見てあげてください。疲れがたまっている人は、次の派遣を休ませることもできます。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "thoughtful",
+            "position": "right"
+          },
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "報告書の最後に『帰還確認』の欄を作ろう。依頼の成否だけでは、帰ってきた人を記録できない。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "mirei",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミレイ",
+        "text": "報告書に必要な欄を、もう見つけたんですね……！",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "happy",
+            "position": "right"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "（たった今、思いついたんだけど……まあいいか。）",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "mirei",
+            "pose": "happy",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      }
+    ]
+  },
+  {
+    "id": "policy",
+    "title": "第二章 · 引き返すための約束",
+    "day": 3,
+    "art": "guild-dawn",
+    "lines": [
+      {
+        "speaker": "ブルーノ",
+        "text": "腕が立つ奴ほど、引く理由がいるんだ。『ここまでやれ』だけじゃ、戻る判断ができん。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "アルド",
+        "text": "僕が『引き返そう』と言ったら、臆病だと思われませんか。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "thoughtful",
+            "position": "right"
+          },
+          {
+            "character": "bruno",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "戻ってこられれば、明日の依頼にもつながる。出発前に、どこで引き返すか決めておこう。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          },
+          {
+            "character": "bruno",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミナ",
+        "text": "回復薬も持っていけるんですね。私一人で、みんなを治そうとしなくていいんだ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミレイ",
+        "text": "これで『方針』と『回復薬』を出発前に選べます。安全重視なら早めに引き返し、強気なら深く進みます。隊長の性格も判断に影響します。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      }
+    ]
+  },
+  {
+    "id": "recruit",
+    "title": "第二章 · 空いている椅子",
+    "day": 4,
+    "art": "guild-dawn",
+    "lines": [
+      {
+        "speaker": "リナ",
+        "text": "外に人が並んでる。『才能を見抜く先生に会いたい』って。面接料、とっていい？",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "door"
+      },
+      {
+        "speaker": "{name}",
+        "text": "とらない。働いてくれる人を探しているんだから。それに、席を全部埋める必要もないよ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right",
+            "motion": "shake",
+            "motionAt": "とらない"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ブルーノ",
+        "text": "給料は、出発しない日にも要る。待ってもらう余裕まで考えるのが、雇い主の腕のうちだ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "thoughtful",
+            "position": "right"
+          },
+          {
+            "character": "lina",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミレイ",
+        "text": "募集の受付を始められます。契約金は日給の四日分。適性だけでなく、給与と今の仲間に足りない役割も見て選んでください。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "リナ",
+        "text": "じゃあ、椅子はひとつ空けておく。……帰ってくる誰かの分、ってことにしようよ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "happy",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      }
+    ]
+  },
+  {
+    "id": "facilities",
+    "title": "第二章 · 帰る場所を直す",
+    "day": 5,
+    "art": "guild-dawn",
+    "lines": [
+      {
+        "speaker": "ミナ",
+        "text": "薬草と包帯の棚を整えたら、依頼書を置く場所がなくなってしまいました。ごめんなさい。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "thoughtful",
+            "position": "left",
+            "motion": "nod",
+            "motionAt": "ごめんなさい"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "step"
+      },
+      {
+        "speaker": "{name}",
+        "text": "謝らなくていい。仕事の場所を先に作らなかった。僕の準備不足だよ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ブルーノ",
+        "text": "治療所か、訓練所か、宿舎か。どれも一度には建てられん。今の仲間に何が必要か、見て決めよう。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミレイ",
+        "text": "施設の計画を立てられます。負傷に備えるなら治療所、成長を助けるなら訓練所、仲間を迎えるなら宿舎です。強化費を払ったあとも、日給を残しておきましょう。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミナ",
+        "text": "これなら薬草と道具の置き場所も整えられます。次の準備が、少し楽になりますね。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      }
+    ]
+  },
+  {
+    "id": "charter",
+    "title": "第三章 · 灰の便り",
+    "day": 6,
+    "art": "guild-dawn",
+    "lines": [
+      {
+        "speaker": "ミレイ",
+        "text": "鉱山から、灰の混じった水の知らせが届きました。遺跡に棲む灰竜が、地下水路を塞いでいるそうです。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "リナ",
+        "text": "孤児院の井戸も濁ってた。お金があっても、いつまでも水を買い続けるわけにはいかないよ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "thoughtful",
+            "position": "right"
+          },
+          {
+            "character": "mirei",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ブルーノ",
+        "text": "正面から竜へ行くな。森で経験を積み、坑道で道を確かめてから、遺跡へ進め。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "街を救えなんて言われると大きすぎる。でも、今日の水を守る仕事なら、一つずつ考えられる。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "lina",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミレイ",
+        "text": "研修期間はここまでです。評判が上がれば、坑道と遺跡の依頼も受けられます。三十日目の市の査定までに灰竜討伐を目指しましょう。間に合わなくても、活動は続けられます。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "neutral",
+            "position": "right"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      }
+    ]
+  },
+  {
+    "id": "aldo_trust",
+    "title": "仲間の章 · 矢を放つ前に",
+    "day": 8,
+    "art": "guild-dawn",
+    "lines": [
+      {
+        "speaker": "アルド",
+        "text": "向いていると言ってもらえたぶん、外すのが怖くなりました。才能があるのに、失敗したらどうしようって。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "step"
+      },
+      {
+        "speaker": "{name}",
+        "text": "適性は成功の約束じゃない。君が続けたい場所を探すための、ひとつの手がかりだよ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "アルド",
+        "text": "では、外した日の報告書も残します。次にどこを狙うか、考え直せるから。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "happy",
+            "position": "left",
+            "motion": "nod",
+            "motionAt": "報告書も残します"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミナ",
+        "text": "剣の三年も、無駄じゃなかったね。前に立つ怖さを知っている弓使いだもの。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "happy",
+            "position": "right"
+          },
+          {
+            "character": "aldo",
+            "pose": "happy",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      }
+    ]
+  },
+  {
+    "id": "mine",
+    "title": "第三章 · 地図にない道",
+    "day": 6,
+    "area": "mine",
+    "art": "guild-dawn",
+    "lines": [
+      {
+        "speaker": "リナ",
+        "text": "坑道の記録、線が一本足りない。昔、逃げるときに通った水路がある。……昔のことは、聞かないで。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "bruno",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "ブルーノ",
+        "text": "聞かん。誰かを帰すために使える道なら、それでいい。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "bruno",
+            "pose": "neutral",
+            "position": "right",
+            "motion": "nod",
+            "motionAt": "それでいい"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "地図に書いてくれる？ 最短の道じゃなくて、安全な道を。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          },
+          {
+            "character": "lina",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "リナ",
+        "text": "あたし、帰り道はよく間違えるんだ。だから、目印はみんなで決めて。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ブルーノ",
+        "text": "赤い布にしよう。俺の古いマントを切って使え。道を覚えるのは、一人の仕事じゃない。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "happy",
+            "position": "right"
+          },
+          {
+            "character": "lina",
+            "pose": "happy",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      }
+    ]
+  },
+  {
+    "id": "bruno",
+    "title": "仲間の章 · 先頭の隣",
+    "day": 12,
+    "art": "guild-dawn",
+    "lines": [
+      {
+        "speaker": "ブルーノ",
+        "text": "昔は、誰より前に立つのが俺の仕事だった。膝が痛むと、置いていかれたような気になる。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "step"
+      },
+      {
+        "speaker": "アルド",
+        "text": "隣で歩いてくれませんか。前に出るべき瞬間を、まだ僕は見極められないんです。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "right"
+          },
+          {
+            "character": "bruno",
+            "pose": "thoughtful",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ブルーノ",
+        "text": "……教える側か。そいつは、剣の腕だけじゃ務まらんな。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "若い人の代わりをしなくていい。若い人が、いつか自分の代わりを務められるように育てるんです。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          },
+          {
+            "character": "bruno",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ブルーノ",
+        "text": "うまいことを言う。よし、今日は装備の手入れからだ。休みの日にも、教えられることはある。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "happy",
+            "position": "left",
+            "motion": "nod",
+            "motionAt": "よし"
+          },
+          {
+            "character": "aldo",
+            "pose": "happy",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      }
+    ]
+  },
+  {
+    "id": "mina",
+    "title": "仲間の章 · ひとり分の薬草茶",
+    "day": 16,
+    "art": "guild-dawn",
+    "lines": [
+      {
+        "speaker": "ミナ",
+        "text": "薬草茶を五人分……いえ、六人分、淹れました。今日は私も座ります。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "cup"
+      },
+      {
+        "speaker": "リナ",
+        "text": "やっと！ ミナが座らないと、あたしもおかわりを頼みにくいじゃん。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "happy",
+            "position": "right",
+            "motion": "jump",
+            "motionAt": "やっと"
+          },
+          {
+            "character": "mina",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミナ",
+        "text": "誰かに必要とされるには、ずっと役に立っていなきゃと思っていました。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "lina",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "必要だからって、ずっと働いてほしいわけじゃない。明日もここにいてほしいんだ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          },
+          {
+            "character": "mina",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミナ",
+        "text": "では、お茶が冷めるまでは休憩です。ギルドマスターも、報告書を置いてください。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "happy",
+            "position": "right"
+          }
+        ],
+        "transition": "cut",
+        "sfx": "cup"
+      }
+    ]
+  },
+  {
+    "id": "ruins",
+    "title": "第四章 · 数字にない答え",
+    "day": 6,
+    "area": "ruins",
+    "art": "guild-dawn",
+    "lines": [
+      {
+        "speaker": "ミレイ",
+        "text": "遺跡からの報告に、水門の位置が記されていました。灰竜を退けられれば、街へ水を戻せます。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "アルド",
+        "text": "最後の編成を、数字だけで決めないでください。行けるかどうか、僕らにも聞いてほしい。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "……そうだね。見えているものだけで、全部わかるわけじゃなかった。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "thoughtful",
+            "position": "right",
+            "motion": "nod",
+            "motionAt": "そうだね"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ブルーノ",
+        "text": "疲労と怪我を確かめろ。薬を用意しろ。そのうえで、俺たちを頼れ。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "neutral",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "リナ",
+        "text": "まずは看板、ちゃんと塗り直そうね。あの斜めの文字、ずっと気になってた。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "happy",
+            "position": "right"
+          },
+          {
+            "character": "bruno",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      }
+    ]
+  },
+  {
+    "id": "eve",
+    "title": "第四章 · 灯りを消さずに",
+    "day": 23,
+    "art": "guild-dawn",
+    "lines": [
+      {
+        "speaker": "ミレイ",
+        "text": "査定の日が近づいています。でも、期限に合わせて怪我を増やすのは、私たちのやり方ではありません。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "{name}",
+        "text": "間に合うかより、準備ができているかを見よう。最後の依頼も、最初の薬草採取と同じように考えよう。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          },
+          {
+            "character": "mirei",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "アルド",
+        "text": "出発する日を決めるのも勇気だけど、待つ日を決めるのも勇気なんですね。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミナ",
+        "text": "私たちは、明日もここに集まれます。それを守ることが、いちばんの準備です。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "happy",
+            "position": "right"
+          },
+          {
+            "character": "aldo",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      }
+    ]
+  },
+  {
+    "id": "extension",
+    "title": "終章 · 三十一枚目の依頼書",
+    "day": 31,
+    "ending": "extension",
+    "art": "guild-dawn",
+    "lines": [
+      {
+        "speaker": "ミレイ",
+        "text": "査定は、継続審査になりました。灰竜はまだいます。でも、街には私たちの仕事が必要だそうです。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "thoughtful",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "blackout",
+        "sfx": "paper"
+      },
+      {
+        "speaker": "リナ",
+        "text": "落第じゃなくて、宿題が増えたってこと？ ……それ、いつもの仕事じゃん。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "そう。じゃあ今日の依頼書を出して。期限は過ぎても、帰りを待つ仕事は終わらない。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          },
+          {
+            "character": "mirei",
+            "pose": "neutral",
+            "position": "left"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ブルーノ",
+        "text": "焦らず鍛え直そう。竜にも、こっちはまだ準備中だと伝えておくか。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "happy",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      }
+    ]
+  },
+  {
+    "id": "homecoming",
+    "title": "終章 · 帰ってくる人たち",
+    "day": 1,
+    "ending": "clear",
+    "art": "ruins-vow",
+    "lines": [
+      {
+        "speaker": "ミレイ",
+        "text": "灰竜討伐、確認しました！ 水門も開き、井戸に澄んだ水が戻っています！",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mirei",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "happy",
+            "position": "right"
+          }
+        ],
+        "transition": "fade",
+        "sfx": "water"
+      },
+      {
+        "speaker": "アルド",
+        "text": "最初に弓を選んだ日のこと、ずっと覚えています。あのとき『戻してもいい』と言ってくれたことも。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "aldo",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ミナ",
+        "text": "帰還した人の名前を、全員分確認しましょう。名簿に丸をつけてください。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "mina",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "ブルーノ",
+        "text": "街じゃ『すべて見通していた』なんて騒いでいるが……今日は、訂正せんでもいい。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "bruno",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "リナ",
+        "text": "看板、塗り直したよ。今度は、ちゃんと帰ってこられる目印にした。",
+        "background": "guild",
+        "cast": [
+          {
+            "character": "lina",
+            "pose": "happy",
+            "position": "left"
+          },
+          {
+            "character": "yuto",
+            "pose": "neutral",
+            "position": "right"
+          }
+        ],
+        "transition": "cut"
+      },
+      {
+        "speaker": "{name}",
+        "text": "（見えたのは、ほんの少しの数字だった。見えないところを埋めてくれたのは、みんなだ。）",
+        "background": "guild",
+        "cast": [],
+        "transition": "fade",
+        "still": "ruins-vow"
+      },
+      {
+        "speaker": "{name}",
+        "text": "おかえり。明日は、みんなで休もう。",
+        "background": "guild",
+        "cast": [],
+        "transition": "cut",
+        "still": "ruins-vow"
+      },
+      {
+        "speaker": "",
+        "text": "ギルドクエスト ― 見えちゃうギルドマスター ―\n第一部 完。これからも依頼と仲間の記録を続けられます。",
+        "background": "guild",
+        "cast": [],
+        "transition": "cut",
+        "still": "ruins-vow"
+      }
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {"id":"forest","name":"東の森","desc":"街から半日の浅い森。ゴブリンと狼が出る。初心者向け。","recommended":200,
+   "enemies":[{"id":"goblin","weight":5,"group":[2,3]},{"id":"wolf","weight":3,"group":[2,3]},{"id":"slime","weight":1,"group":[1,2]}]},
+  {"id":"mine","name":"古い坑道","desc":"打ち捨てられた鉱山。暗く、スライムと骸骨が住みつく。","recommended":290,
+   "enemies":[{"id":"slime","weight":4,"group":[2,3]},{"id":"skeleton","weight":4,"group":[2,3]},{"id":"goblin","weight":1,"group":[2,3]}]},
+  {"id":"ruins","name":"灰竜の遺跡","desc":"灰竜が棲むという古代遺跡。番兵が今も動いている。","recommended":400,
+   "enemies":[{"id":"sentinel","weight":4,"group":[1,2]},{"id":"skeleton","weight":4,"group":[2,3]}]}
+]

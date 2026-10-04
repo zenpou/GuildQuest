@@ -1,0 +1,19 @@
+{
+  "id": "./",
+  "name": "ギルドクエスト 〜見えちゃうギルドマスター〜",
+  "short_name": "ギルドクエスト",
+  "description": "仲間の才能を見つけ、依頼に送り出す。物語とともに育てる小さなギルド。",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#151e20",
+  "theme_color": "#202c2e",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"icons/maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}
