@@ -81,6 +81,15 @@ export function dayAdvanceBlock(s: GameState): string | null {
   return null;
 }
 
+/**
+ * 研修中の案内ストリップを出すか。案内先のタブに着いたら消し、別のタブへ
+ * 移ればまた出して誘導する。ホームは専用の案内カードを持つので常に出さない。
+ */
+export function tutorialStripShown(s: GameState, tab: string): boolean {
+  if (!s.campaign || s.day > 5 || tab === 'home') return false;
+  return tutorialObjective(s).tab !== tab;
+}
+
 export function tutorialObjective(s: GameState): TutorialObjective {
   if (!isCampaignMode(s)) {
     return { title: 'ギルドを運営する', text: '依頼を選び、冒険者を派遣してギルドを成長させよう。', tab: 'home' };

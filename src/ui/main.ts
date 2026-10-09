@@ -3,7 +3,7 @@ import './variants.css';
 import './campaign.css';
 import { div, h } from './dom';
 import { bootstrapIntro, setRenderHook, ui, state, go } from './shared';
-import { tutorialObjective } from '../core/campaign';
+import { tutorialObjective, tutorialStripShown } from '../core/campaign';
 import { desk } from './variants/desk';
 import { hall } from './variants/hall';
 import { pocket } from './variants/pocket';
@@ -37,7 +37,7 @@ function render() {
   const focusKey = active?.dataset.focusKey;
   app.className = `v-${current.id}`;
   const nodes: HTMLElement[] = [...current.render()];
-  if (state.campaign && state.day <= 5 && ui.tab !== 'home') {
+  if (tutorialStripShown(state, ui.tab)) {
     const task = tutorialObjective(state);
     nodes.push(div('tutorial-strip', h('b', null, task.title), h('span', null, task.text), h('button', { onclick: () => go(task.tab) }, '案内を開く')));
   }

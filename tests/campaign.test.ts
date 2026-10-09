@@ -5,7 +5,7 @@ import {
   questUnlocked, tutorialObjective,
 } from '../src/core/game';
 import { QUEST } from '../src/core/data';
-import { dayAdvanceBlock } from '../src/core/campaign';
+import { dayAdvanceBlock, tutorialStripShown } from '../src/core/campaign';
 
 const legacyGame = (seed: number) => {
   const s = newGame(seed);
@@ -55,6 +55,25 @@ describe('段階チュートリアル', () => {
     expect(s.campaign?.introComplete).toBe(true);
     expect(dispatch(s, { questId: 'q_herb', memberIds: ['c_lina'], leaderId: 'c_lina', policy: 'standard', potions: 0 }).ok).toBe(false);
     expect(advanceDay(s).day).toBe(2);
+  });
+
+  it('案内ストリップは案内先のタブに着くと消え、別タブへ移ると再び出る', () => {
+    const s = newGame(2);
+    expect(tutorialObjective(s).tab).toBe('roster');
+    expect(tutorialStripShown(s, 'dispatch')).toBe(true);
+    expect(tutorialStripShown(s, 'log')).toBe(true);
+    expect(tutorialStripShown(s, 'roster')).toBe(false);
+    expect(tutorialStripShown(s, 'home')).toBe(false);
+
+    expect(changeJob(s, 'c_aldo', 'ranger').ok).toBe(true);
+    expect(tutorialObjective(s).tab).toBe('dispatch');
+    expect(tutorialStripShown(s, 'dispatch')).toBe(false);
+    expect(tutorialStripShown(s, 'roster')).toBe(true);
+
+    expect(tutorialStripShown(legacyGame(2), 'dispatch')).toBe(false);
+    const late = newGame(2);
+    late.day = 6;
+    expect(tutorialStripShown(late, 'log')).toBe(false);
   });
 
   it('初回依頼が失敗してもチュートリアルは進み、負傷は短期で済む', () => {
